@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Latz3D" />
+		<Option platforms="Windows;Unix;" />
+		<Option makefile_is_custom="1" />
+		<Option execution_dir="..\..\builder\" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option platforms="Windows;Unix;" />
+				<Option output="../../bin/run" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../../bin" />
+				<Option object_output="../winobj/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option platforms="Windows;Unix;" />
+				<Option output="../../bin/run" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../../bin" />
+				<Option object_output="../winobj/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="../../include/ent.h" />
+		<Unit filename="../../include/lze.h" />
+		<Unit filename="../../include/lzi.h" />
+		<Unit filename="../../include/lzo.h" />
+		<Unit filename="../../include/mymath.h" />
+		<Unit filename="../../src/ent.cpp" />
+		<Unit filename="../../src/lze.cpp" />
+		<Unit filename="../../src/lzi.cpp" />
+		<Unit filename="../../src/lzo.cpp" />
+		<Unit filename="../../src/main.cpp" />
+		<Unit filename="../../src/mymath.cpp" />
+		<Unit filename="../../src/test.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

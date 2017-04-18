@@ -1,0 +1,37 @@
+embor {
+  Pos "0, 0, 0"
+  Mozg "8456"
+  test {
+    Model "TTest.lzo"
+    Pos "0, 1.4, 0"
+    Rot "0, 0, 0"
+    lab1 {
+      Rot "0, 0, 0"
+      Pos "0, -0.5, -0.15"
+      Model "TLab.lzo"
+    }
+    lab2 {
+      Pos "0, -0.5, 0.15"
+      Model "TLab.lzo"
+      Rot "0, 0, 0"
+    }
+    kez1 {
+      Pos "0, 0.25, -0.4"
+      Rot "0, 0, 0"
+      Model "TKez.lzo"
+    }
+    kez2 {
+      Pos "0, 0.25, 0.4"
+      Rot "0, 0, 0"
+      Model "TKez.lzo"
+    }
+    fej {
+      Model "monkey.lzo"
+      Pos "0, 0.6, 0"
+      Rot "0, 1.57079, 0"
+      Scl "0.5, 0.5, 0.5"
+    }
+    //3.14159
+    //1.57079
+  }
+}

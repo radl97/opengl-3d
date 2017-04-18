@@ -1,0 +1,35 @@
+#version 430 core
+
+layout (location=0) out vec4 outCol;
+in vec4 poz;
+in vec2 UV;
+in vec4 col;
+
+in vec3 tang;
+in vec3 bita;
+in vec3 norm;
+
+uniform vec3 dirlight;
+uniform sampler2D sampler;
+uniform sampler2D sampler2;
+uniform int useTex;
+uniform int useNorm;
+
+void main(){
+  mat3 mat=mat3(
+    tang,
+    bita,
+    norm);
+  vec3 norm=normalize((texture(sampler2, UV).rgb-0.5)*2);
+  vec3 norm2=mat*normalize(norm);
+  vec4 color;
+  if(useTex>0)
+    color=vec4(texture(sampler, UV).rgb,1);
+  else
+    color=col;
+
+  float diff=max(0,dot(normalize(dirlight-poz.xyz),norm2));
+  if(useNorm>0)
+    color=vec4(color.xyz*diff,color.w);
+  outCol=color;
+}
